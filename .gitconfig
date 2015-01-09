@@ -1,0 +1,32 @@
+[user]
+       name = david-adsit
+       email = david-adsit@pluralsight.com
+[core]
+	autocrlf = false
+       trustctime = false
+
+
+[diff]
+       tool = p4merge
+
+[difftool]
+	prompt = false
+
+[difftool "p4merge"]
+       path = C:/Program Files/Perforce/p4merge.exe
+       prompt = false
+
+[merge]
+       tool = p4merge
+
+[mergetool "p4merge"]
+       path = C:/Program Files/Perforce/p4merge.exe
+       trustExitCode = true
+       keepBackup = false
+       prompt = false
+
+[mergetool]
+	prompt = false
+
+[push]
+       default = matching
