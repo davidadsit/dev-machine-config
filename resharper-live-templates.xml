@@ -1,0 +1,77 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="42d03350-3a49-4f77-ac3d-06d23790a28f" shortcut="assert" description="adds an assert comment for an AAA test" text="// assert$END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="c8b174d2-b25f-45c5-8479-ef8d1bb455b8" shortcut="act" description="adds an act comment for an AAA test" text="// act$END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="742bf534-4f36-4615-ba93-2aa03a36d9cc" shortcut="prf" description="Public readonly field" text="public readonly $END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="7e256b47-e1e0-4511-b369-50a0d7d474bd" shortcut="notie" description="Throws a NotImplementedException" text="throw new NotImplementedException();" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="4a9f75b0-cb39-43f0-b886-1334251baa37" shortcut="log" description="creates a static readonly log4net style logger" text="static readonly ILog log = LogManager.GetLogger(typeof ($CLASS$));$END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpFile" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="CLASS" expression="typeName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cf3ca02e-eccd-4479-9e3a-bf94a56e1b1a" shortcut="dp" description="Inserts a dependency property" text="public static readonly DependencyProperty $PropertyName$Property = DependencyProperty.Register(&quot;$PropertyName$&quot;, typeof($PropertyType$), typeof($PropertyOwner$), null);&#xD;&#xA;public $PropertyType$ $PropertyName$&#xD;&#xA;{&#xD;&#xA;    get { return ($PropertyType$) GetValue($PropertyName$Property); }&#xD;&#xA;    set { SetValue($PropertyName$Property, value); }&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpFile" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="PropertyName" expression="" initialRange="2" />
+      <Variable name="PropertyType" expression="guessExpectedType()" initialRange="1" />
+      <Variable name="PropertyOwner" expression="typeName()" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="50452016-b307-41ed-a030-b2c2490f3edb" shortcut="dep" description="Readonly dependency via ServiceLocator" text="readonly $INTERFACE$ $varName$ = ServiceLocator.GetService&lt;$INTERFACE$&gt;();" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpFile" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="INTERFACE" expression="" initialRange="0" />
+      <Variable name="varName" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="379ae5f1-4480-46ab-b408-6bb377bc64d1" shortcut="sample" description="" text="public static $CLASS$ $CLASS$&#xD;&#xA;{&#xD;&#xA;    get { return sample$CLASS$Memo ?? (sample$CLASS$Memo =$CLASS$Mother.Make$CLASS$()); }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;static $CLASS$ sample$CLASS$Memo;&#xD;&#xA;&#xD;&#xA;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpTypeMember" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="CLASS" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
